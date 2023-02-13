@@ -1,0 +1,11 @@
+function getlength(arr) {
+  let count = 0;
+  for (let item of arr) {
+    if (Array.isArray(item)) {
+      count += getlength(item);
+    } else {
+      count += 1;
+    }
+  }
+  return count;
+}
