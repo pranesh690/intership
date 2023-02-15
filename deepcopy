@@ -1,0 +1,45 @@
+function doDeepCopy(input) {
+  let result = {};
+
+  for (let key of Object.keys(input)) {
+    let value = input[key];
+    if (typeof value === 'object' && value !== null) {
+      result[key] = doDeepCopy(value);
+    } else {
+      result[key] = value;
+    }
+  }
+
+  return result;
+}
+const obj = {
+  name: 'pra',
+  age: 20,
+  address: {
+    city: "Lalit",
+    pro: 'Bag',
+  },
+  hobbies: ['reading', 'travelling'],
+};
+
+const objCopy = doDeepCopy(obj);
+
+console.log(obj);
+
+
+
+
+console.log(obj);
+
+
+console.log(objCopy); 
+
+// Modify the original object
+obj.age = 21;
+obj.address.city = 'Kathmandu';
+obj.hobbies.push('singing');
+
+console.log(obj);
+
+
+console.log(objCopy);
