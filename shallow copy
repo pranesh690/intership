@@ -1,0 +1,15 @@
+function shallowCopy(obj){
+    return{...obj};
+}
+const person ={
+    name: "pra",
+    age: 89,
+    adress: { city:"kath"}
+};
+const personCopy =shallowCopy(person);
+console.log(person);
+console.log(personCopy);
+person.name="ra";
+person.adress.city ="lalit";
+console.log(person);
+console.log(personCopy);
