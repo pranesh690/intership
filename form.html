@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic form</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+   <div class="box">
+    <h1 class="head">Basic form</h1>
+    <form class="login_form" method="post" name="form" onsubmit="return validation()">
+        <label for="fullname">Full name</label>
+        <input type="text" name="fullname" ><br>
+        <div id="fullnameError" class="fullerr">Please fill in your full name</div>
+        <label for="email">Email</label>
+        <input type="email" name="email" ><br>
+        <div id="emailError" class="emerr">Please fill in email</div>
+        <label for="password">Password</label>
+        <input type="password" name="password" ><br>
+        <div id="passwordError" class="passerr">Please fill in your password</div>
+        <button type="submit" class="butt">Submit</button>
+
+    </form>
+   </div>
+<script src="form.js"></script>    
+</body>
+</html>
