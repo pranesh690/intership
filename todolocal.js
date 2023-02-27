@@ -2,10 +2,7 @@ let addToDoButton = document.getElementById('addTodo');
 let todoBox = document.getElementById('todoBox');
 let inputField = document.getElementById('inputPlace');
 
-const removeTodo = (todo) => {
-  todoBox.removeChild(todo);
-  localStorage.setItem('todoList', todoBox.innerHTML);
-};
+
 
 addToDoButton.addEventListener('click', function(){
     var paragraph = document.createElement('p')
